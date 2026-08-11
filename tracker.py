@@ -18,7 +18,8 @@ while True:
         continue
     else:
         input_expenseprice = float(input("Enter the expense price: $"))
-        expenses.append(f"{input_expensename} (${input_expenseprice})")
+        category = input("Enter a category for this expense (e.g., Food, Entertainment, Bills, etc.): ")
+        expenses.append(f"{input_expensename} (${input_expenseprice}) [{category}]")
         current_balance = current_balance - input_expenseprice
         print(f"Your current balance is : ${current_balance}")
         print(f"Your expenses are: {expenses}")
