@@ -1,3 +1,4 @@
+import json
 print("Welcome to the Expense Tracker!")
 while True:
     try:
@@ -44,3 +45,5 @@ print("Here is a summary of your expenses: ")
 for expense in expenses:
     print(expense)
 print(f"Your final balance is: ${current_balance}")
+with open("expenses.json", "w") as file:
+    json.dump(expenses, file, indent=4) 
