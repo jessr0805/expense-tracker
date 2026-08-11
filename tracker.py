@@ -1,4 +1,14 @@
-starting_balance = float(input("What is your starting balance: $"))
+print("Welcome to the Expense Tracker!")
+while True:
+    try:
+        starting_balance = float(input("What is your starting balance: $"))
+        if starting_balance < 0:
+            print("Please enter a valid starting balance.")
+        else:
+            break
+    except ValueError:
+        print("Please enter a valid starting balance.")
+
 expenses = []
 print(f"Starting balance: ${starting_balance}")
 current_balance = starting_balance
@@ -17,7 +27,12 @@ while True:
         print("Please enter a valid expense name.")
         continue
     else:
-        input_expenseprice = float(input("Enter the expense price: $"))
+        while True:
+            try:
+                input_expenseprice = float(input("Enter the expense price: $"))
+                break
+            except ValueError:
+                print("Please enter a valid expense price.")
         category = input("Enter a category for this expense (e.g., Food, Entertainment, Bills, etc.): ")
         expenses.append(f"{input_expensename} (${input_expenseprice}) [{category}]")
         current_balance = current_balance - input_expenseprice
