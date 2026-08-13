@@ -19,6 +19,6 @@ To run the tracker directly in the terminal,
 ## Future Roadmap
 - [x] CLI Core Logic & Error Handling
 - [x] Category Tagging & JSON Export
-- [ ] Desktop GUI (`CustomTkinter`)
+- [x] Desktop GUI (`CustomTkinter`)
 - [ ] Visual Analytics (Expense Charts & Category Breakdown)
 - [ ] Budget Limits & Over-Budget Safety Alerts
